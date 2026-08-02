@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SRT Camera</string>
+    <string name="server_hint">Server IP (e.g. 192.168.1.100)</string>
+    <string name="port_hint">Port</string>
+    <string name="stream_id_hint">Stream ID (e.g. publish:phone)</string>
+    <string name="bitrate_hint">Bitrate (bps)</string>
+    <string name="start_streaming">Start Streaming</string>
+    <string name="stop_streaming">Stop Streaming</string>
+    <string name="resolution_label">Resolution</string>
+    <string name="status_ready">Ready</string>
+    <string name="permission_required">Camera and microphone permissions are required</string>
+
+    <!-- Foreground Service notification -->
+    <string name="notification_channel_name">SRT Camera Streaming</string>
+    <string name="notification_channel_desc">Controls the SRT camera streaming service</string>
+    <string name="notification_title">SRT Camera</string>
+    <string name="notification_ready">Service running - ready to stream</string>
+    <string name="notification_streaming">Streaming</string>
+    <string name="notification_stop">Stop</string>
+</resources>

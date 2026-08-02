@@ -1,0 +1,15 @@
+<resources>
+    <color name="ic_launcher_background">#1A1A2E</color>
+    <color name="bg_dark">#1A1A2E</color>
+    <color name="bg_card">#16213E</color>
+    <color name="accent">#0F3460</color>
+    <color name="accent_light">#533483</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="status_streaming">#4CAF50</color>
+    <color name="status_error">#F44336</color>
+    <color name="status_idle">#9E9E9E</color>
+    <color name="status_connecting">#FF9800</color>
+    <color name="button_start">#4CAF50</color>
+    <color name="button_stop">#F44336</color>
+</resources>

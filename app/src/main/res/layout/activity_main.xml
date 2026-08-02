@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- Camera Preview -->
+    <io.github.thibaultbee.streampack.ui.views.PreviewView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Performance Stats Bar (compact, always visible during streaming) -->
+    <LinearLayout
+        android:id="@+id/perfBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bg_card"
+        android:padding="6dp"
+        android:visibility="gone"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/statUptime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:text="--:--:--" />
+
+        <TextView
+            android:id="@+id/statCpu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:text="CPU: --" />
+
+        <TextView
+            android:id="@+id/statMem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:text="MEM: --" />
+
+        <TextView
+            android:id="@+id/statNet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:text="NET: --" />
+
+        <TextView
+            android:id="@+id/statBatt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:text="BAT: --" />
+
+        <TextView
+            android:id="@+id/statThermal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:text="--" />
+
+    </LinearLayout>
+
+    <!-- Settings Panel -->
+    <ScrollView
+        android:id="@+id/settingsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Resolution -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resolution_label"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/resolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_dark"
+                android:padding="8dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Server IP -->
+            <EditText
+                android:id="@+id/server"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/server_hint"
+                android:textColor="@color/white"
+                android:textColorHint="@color/text_secondary"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:background="@color/bg_dark"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Port + Bitrate row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <EditText
+                    android:id="@+id/port"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/port_hint"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:background="@color/bg_dark"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp" />
+
+                <EditText
+                    android:id="@+id/bitrate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:hint="@string/bitrate_hint"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:background="@color/bg_dark"
+                    android:padding="12dp" />
+
+            </LinearLayout>
+
+            <!-- Stream ID -->
+            <EditText
+                android:id="@+id/streamId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/stream_id_hint"
+                android:textColor="@color/white"
+                android:textColorHint="@color/text_secondary"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:background="@color/bg_dark"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Start/Stop Button -->
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/start_streaming"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/button_start"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Status -->
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_ready"
+                android:textColor="@color/status_idle"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:padding="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
