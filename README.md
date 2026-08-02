@@ -1,9 +1,16 @@
 # SRT Camera 手机推流端 (srt-camera-phone)
 
+**简体中文** | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
+
 > 把你的 Android 手机变成一台**无线摄像头**——
 > 通过 SRT 协议把手机摄像头画面低延迟推到电脑，配合 PC 端即可当作系统摄像头用于直播、会议、监控。
 
 配套 PC 接收端：**[stream-to-virtualcam](https://github.com/Lisaccount/stream-to-virtualcam)**（把这路流变成 Windows 虚拟摄像头）。
+
+## ⬇️ 下载 APK
+
+前往 **[Releases 页面](https://github.com/Lisaccount/srt-camera-phone/releases/latest)** 下载 `app-debug.apk`，
+传到 Android 手机安装（需在系统设置里允许「安装未知来源应用」）。要求 Android 8.0（API 26）及以上。
 
 ---
 
